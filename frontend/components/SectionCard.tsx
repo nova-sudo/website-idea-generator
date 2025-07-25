@@ -42,36 +42,7 @@ const SectionCard: React.FC<SectionCardProps> = ({ section, onGenerateUI, uiLoad
         </div>
 
         {/* Code Display */}
-        <div className="mb-6 relative">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Generated Code</span>
-            <div className="flex-1 h-px bg-gradient-to-r from-gray-300 to-transparent" />
-          </div>
 
-          <div className="relative border border-gray-700 rounded-2xl overflow-hidden">
-            <CodeMirror
-              value={section.code}
-              height="300px"
-              theme={vscodeDark}
-              readOnly
-              extensions={[javascript()]}
-            />
-            <button
-              onClick={handleCopy}
-              aria-label="Copy code"
-              className="absolute top-4 right-4 p-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors"
-            >
-              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
 
         <button
           onClick={handleGenerate}

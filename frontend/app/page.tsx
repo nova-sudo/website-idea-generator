@@ -31,7 +31,7 @@ const Home = () => {
           headers: {
             'Content-Type': 'application/json',
           },
-          timeout: 30000, // 30 second timeout
+          timeout: 30010, // 30 second timeout
         }
       );
       console.log('Response received:', response.data);
@@ -86,7 +86,7 @@ const Home = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        timeout: 30000,
+        timeout: 30010,
       });
       console.log('UI Design response:', response.data);
       setUIDesign(response.data);
